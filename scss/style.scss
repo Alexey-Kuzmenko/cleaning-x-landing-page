@@ -9,3 +9,12 @@
 /* * reset and root elements */
 @import 'base/reset';
 @import 'modules/root';
+
+/* * page and container */
+@import 'modules/page';
+@import 'modules/container';
+@import 'modules/buttons';
+
+/* * header */
+@import 'modules/header';
+@import 'modules/menu';

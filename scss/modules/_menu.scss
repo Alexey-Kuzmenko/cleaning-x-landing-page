@@ -1,0 +1,79 @@
+.menu {
+    margin-right: 275px;
+
+    &__list {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &>li {
+            margin-right: 22px;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+
+    &__link {
+        @include font-style($dark-blue, 1.125rem);
+        position: relative;
+        transition: all 0.3s ease;
+    }
+
+}
+
+@include media (min-width, 1000px) {
+    .menu {
+
+        &__link {
+
+            &::after,
+            &_active::after {
+                content: '';
+                position: absolute;
+                left: 0;
+                bottom: -50%;
+
+                width: 100%;
+                height: 3px;
+                border-radius: 14px;
+                background-color: $blue-color;
+            }
+
+            &::after {
+                opacity: 0;
+                visibility: hidden;
+                transition: all 0.3s ease;
+            }
+
+            &:hover,
+            &:hover::after {
+                color: $blue-color;
+                opacity: 1;
+                visibility: visible;
+
+                transition: all 0.6s ease;
+            }
+
+            &_active {
+                color: $blue-color;
+                pointer-events: none;
+
+                &::after {
+                    visibility: visible;
+                    opacity: 1;
+                }
+            }
+
+
+
+        }
+    }
+}
+
+@include media(max-width, 1200px) {
+    .menu {
+        margin-right: 0;
+    }
+}

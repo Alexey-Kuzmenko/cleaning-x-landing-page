@@ -1,0 +1,36 @@
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    max-width: 174px;
+    height: 54px;
+    padding: 17px 24px;
+
+    background-color: $blue-color;
+    border-radius: 14px;
+
+    @include font-style($white-color, 1rem, 1.125rem);
+    transition: all 0.3s ease;
+
+    &_light {
+        background-color: $white-color;
+        color: $dark-blue;
+        border: 1px solid #EFF0F6;
+        box-shadow: 0px 4px 10px rgba(20, 20, 43, 0.04);
+    }
+
+}
+
+@include media (min-width, 1000px) {
+    .button {
+        &:hover {
+            background-color: $white-color;
+            color: $dark-blue;
+            outline: 1px solid #EFF0F6;
+            box-shadow: 0px 4px 10px rgba(20, 20, 43, 0.04);
+
+            transition: all 0.6s ease;
+        }
+    }
+}
