@@ -1,4 +1,17 @@
 (function () {
+    // * UI elements
+    const body = document.body
+    const menuIcon = document.querySelector('.menu__icon')
+    const menu = document.querySelector('.menu__body')
+
+
+    // * menu icon handler
+    menuIcon.addEventListener('click', (e) => {
+        if (e.target) {
+            e.target.classList.toggle('menu__icon_active')
+            menu.classList.toggle('menu__body_active')
+        }
+    })
 
     // * http module
     function http() {

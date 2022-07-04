@@ -324,11 +324,16 @@ body {
   }
   .menu__body {
     position: fixed;
-    left: 0;
     top: 0;
+    left: -100%;
     width: 100%;
     height: 100%;
     background-color: #FFFFFF;
+    -webkit-transition: left 0.3s ease 0s;
+    transition: left 0.3s ease 0s;
+  }
+  .menu__body_active {
+    left: 0;
   }
   .menu__list {
     -webkit-box-orient: vertical;
@@ -349,10 +354,10 @@ body {
 }
 
 @media (max-width: 1000px) and (orientation: landscape) {
-  .menu__body {
+  .menu__body_active {
     overflow: auto;
   }
-  .menu__body::before {
+  .menu__body_active::before {
     content: '';
     width: 100%;
     height: 80px;

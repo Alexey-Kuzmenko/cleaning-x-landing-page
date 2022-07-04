@@ -141,13 +141,18 @@
 
         &__body {
             position: fixed;
-            left: 0;
             top: 0;
+            left: -100%;
 
             width: 100%;
             height: 100%;
 
             background-color: $white-color;
+            transition: left 0.3s ease 0s;
+
+            &_active {
+                left: 0;
+            }
         }
 
         &__list {
@@ -169,7 +174,7 @@
 @media(max-width: 1000px) and (orientation: landscape) {
     .menu {
 
-        &__body {
+        &__body_active {
             overflow: auto;
 
             &::before {
