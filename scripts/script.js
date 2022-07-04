@@ -1,17 +1,31 @@
 (function () {
     // * UI elements
     const body = document.body
-    const menuIcon = document.querySelector('.menu__icon')
+    const header = document.querySelector('.header')
+    const headerLinks = document.querySelectorAll('.menu__link')
     const menu = document.querySelector('.menu__body')
 
 
     // * menu icon handler
-    menuIcon.addEventListener('click', (e) => {
-        if (e.target) {
+    header.addEventListener('click', (e) => {
+        if (e.target.classList.contains('menu__icon')) {
             e.target.classList.toggle('menu__icon_active')
             menu.classList.toggle('menu__body_active')
+        } else if (e.target.classList.contains('menu__link')) {
+            e.preventDefault()
+            e.target.classList.add('menu__link_active')
+            checkHeaderLinksClass(e.target, headerLinks)
         }
     })
+
+    function checkHeaderLinksClass(target, links) {
+        const linksArr = [...links]
+        linksArr.forEach(link => {
+            if (link !== target) {
+                link.classList.remove('menu__link_active')
+            }
+        })
+    }
 
     // * http module
     function http() {
