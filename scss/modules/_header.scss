@@ -45,3 +45,15 @@
         }
     }
 }
+
+@include media(max-width, 1000px) {
+    .header {
+        &__flex-container {
+            flex-direction: row-reverse;
+        }
+
+        &__cart-block {
+            display: none;
+        }
+    }
+}

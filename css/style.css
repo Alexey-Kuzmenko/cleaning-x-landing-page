@@ -27,8 +27,8 @@ h2,
 h3,
 h4,
 p,
-ul[class],
-ol[class],
+ul,
+ol,
 li,
 figure,
 figcaption,
@@ -190,6 +190,18 @@ body {
   }
 }
 
+@media (max-width: 1000px) {
+  .header__flex-container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
+  .header__cart-block {
+    display: none;
+  }
+}
+
 .menu {
   margin-right: 275px;
 }
@@ -260,6 +272,98 @@ body {
 @media (max-width: 1200px) {
   .menu {
     margin-right: 0;
+  }
+}
+
+@media (max-width: 1000px) {
+  .menu__icon {
+    z-index: 5;
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 18px;
+    cursor: pointer;
+  }
+  .menu__icon span, .menu__icon::before, .menu__icon::after {
+    left: 0;
+    position: absolute;
+    height: 10%;
+    width: 100%;
+    -webkit-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+    background-color: #211F54;
+    border-radius: 14px;
+  }
+  .menu__icon::before, .menu__icon::after {
+    content: "";
+  }
+  .menu__icon::before {
+    top: 0;
+  }
+  .menu__icon::after {
+    bottom: 0;
+  }
+  .menu__icon span {
+    top: 50%;
+    -webkit-transform: scale(1) translate(0px, -50%);
+            transform: scale(1) translate(0px, -50%);
+  }
+  .menu__icon_active span {
+    -webkit-transform: scale(0) translate(0px, -50px);
+            transform: scale(0) translate(0px, -50px);
+  }
+  .menu__icon_active::before {
+    top: 50%;
+    -webkit-transform: rotate(-45deg) translate(0px, -50%);
+            transform: rotate(-45deg) translate(0px, -50%);
+  }
+  .menu__icon_active::after {
+    bottom: 50%;
+    -webkit-transform: rotate(45deg) translate(0px, 50%);
+            transform: rotate(45deg) translate(0px, 50%);
+  }
+  .menu__body {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #FFFFFF;
+  }
+  .menu__list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    margin-top: 15vh;
+  }
+  .menu__list > li {
+    margin: 10px 0;
+  }
+  .menu__link {
+    font-size: 1.75rem;
+  }
+}
+
+@media (max-width: 1000px) and (orientation: landscape) {
+  .menu__body {
+    overflow: auto;
+  }
+  .menu__body::before {
+    content: '';
+    width: 100%;
+    height: 80px;
+    background-color: inherit;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 3;
+  }
+  .menu__list {
+    margin-top: 25vh;
   }
 }
 /*# sourceMappingURL=style.css.map */
