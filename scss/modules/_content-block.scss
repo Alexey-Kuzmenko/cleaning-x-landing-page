@@ -1,0 +1,51 @@
+.content-block {
+    max-width: 678px;
+
+    &__title {
+        margin-bottom: 20px;
+
+        &_large {
+            max-width: 518px;
+            @include font-style($dark-blue, 4.25rem, 4.625rem)
+        }
+    }
+
+    &__text {
+        min-width: 474px;
+        @include font-style($grey-color)
+    }
+
+    &__controls {
+        display: flex;
+        flex-flow: row wrap;
+    }
+
+    &__contacts {
+        display: flex;
+        align-items: center;
+        flex-flow: row wrap;
+    }
+
+    &__button {
+        margin-right: 28px;
+    }
+
+    &__number {
+        margin-left: 16.5px;
+        position: relative;
+        @include font-style($dark-blue, $subtitle-size, 2.25rem);
+        font-weight: 700;
+        align-self: flex-end;
+
+        &::before {
+            content: 'Call us now';
+            position: absolute;
+            left: 0;
+            top: -100%;
+            @include font-style ($text-color);
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 0.1rem;
+        }
+    }
+}

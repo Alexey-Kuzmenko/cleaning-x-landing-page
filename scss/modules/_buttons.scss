@@ -3,9 +3,9 @@
     align-items: center;
     justify-content: center;
 
-    max-width: 174px;
-    height: 54px;
-    padding: 17px 24px;
+    max-width: 217px;
+    height: 73px;
+    padding: 26px 38px;
 
     background-color: $blue-color;
     border-radius: 14px;
@@ -13,11 +13,33 @@
     @include font-style($white-color, 1rem, 1.125rem);
     transition: all 0.3s ease;
 
+    &_small {
+        max-width: 174px;
+        height: 54px;
+        padding: 17px 24px;
+    }
+
     &_light {
         background-color: $white-color;
         color: $dark-blue;
         border: 1px solid #EFF0F6;
         box-shadow: 0px 4px 10px rgba(20, 20, 43, 0.04);
+    }
+
+    &_circle {
+        max-width: 71px;
+        height: 71px;
+        border-radius: 50%;
+        padding: 35px;
+
+        background: url(../../images/icons/phone_icon.svg) no-repeat;
+        background-position: center;
+
+        background-color: $white-color;
+        border: 1px solid #DCDDEB;
+
+        -webkit-animation: shake-top 1s cubic-bezier(0.455, 0.030, 0.515, 0.955) infinite both;
+        animation: shake-top 1s cubic-bezier(0.455, 0.030, 0.515, 0.955) infinite both;
     }
 
 }
@@ -31,6 +53,14 @@
             box-shadow: 0px 4px 10px rgba(20, 20, 43, 0.04);
 
             transition: all 0.6s ease;
+        }
+
+        &_circle:hover {
+            background-color: $dark-white-color;
+            transition: all 0.6s ease;
+            outline: 1px solid #EFF0F6;
+
+            animation-play-state: paused;
         }
     }
 }

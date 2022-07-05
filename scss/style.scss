@@ -5,16 +5,23 @@
 /* * font */
 @import 'base/fonts';
 
-
 /* * reset and root elements */
 @import 'base/reset';
 @import 'modules/root';
 
+/* general modues */
+@import 'modules/buttons';
+@import 'vendor/animations';
+
 /* * page and container */
 @import 'modules/page';
 @import 'modules/container';
-@import 'modules/buttons';
 
 /* * header */
 @import 'modules/header';
 @import 'modules/menu';
+
+/* * main */
+@import 'modules/main';
+@import 'modules/content-block';
+@import 'modules/info-block';

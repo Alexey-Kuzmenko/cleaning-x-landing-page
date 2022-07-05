@@ -1,0 +1,10 @@
+.main {
+    position: relative;
+
+    &__cover {
+        background: url(../../images/cover_image_1.png) no-repeat;
+        max-width: 100%;
+        // background-size: cover;
+        background-position: right;
+    }
+}

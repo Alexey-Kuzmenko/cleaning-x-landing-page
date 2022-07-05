@@ -71,6 +71,144 @@ body {
   font-weight: 400;
 }
 
+/* general modues */
+.button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  max-width: 217px;
+  height: 73px;
+  padding: 26px 38px;
+  background-color: #0075FF;
+  border-radius: 14px;
+  font-size: 1rem;
+  line-height: 1.125rem;
+  color: #FFFFFF;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.button_small {
+  max-width: 174px;
+  height: 54px;
+  padding: 17px 24px;
+}
+
+.button_light {
+  background-color: #FFFFFF;
+  color: #211F54;
+  border: 1px solid #EFF0F6;
+  -webkit-box-shadow: 0px 4px 10px rgba(20, 20, 43, 0.04);
+          box-shadow: 0px 4px 10px rgba(20, 20, 43, 0.04);
+}
+
+.button_circle {
+  max-width: 71px;
+  height: 71px;
+  border-radius: 50%;
+  padding: 35px;
+  background: url(../../images/icons/phone_icon.svg) no-repeat;
+  background-position: center;
+  background-color: #FFFFFF;
+  border: 1px solid #DCDDEB;
+  -webkit-animation: shake-top 1s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite both;
+  animation: shake-top 1s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite both;
+}
+
+@media (min-width: 1000px) {
+  .button:hover {
+    background-color: #FFFFFF;
+    color: #211F54;
+    outline: 1px solid #EFF0F6;
+    -webkit-box-shadow: 0px 4px 10px rgba(20, 20, 43, 0.04);
+            box-shadow: 0px 4px 10px rgba(20, 20, 43, 0.04);
+    -webkit-transition: all 0.6s ease;
+    transition: all 0.6s ease;
+  }
+  .button_circle:hover {
+    background-color: #F7F9FC;
+    -webkit-transition: all 0.6s ease;
+    transition: all 0.6s ease;
+    outline: 1px solid #EFF0F6;
+    -webkit-animation-play-state: paused;
+            animation-play-state: paused;
+  }
+}
+
+@-webkit-keyframes shake-top {
+  0%,
+  100% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transform-origin: 50% 0;
+    transform-origin: 50% 0;
+  }
+  10% {
+    -webkit-transform: rotate(2deg);
+    transform: rotate(2deg);
+  }
+  20%,
+  40%,
+  60% {
+    -webkit-transform: rotate(-4deg);
+    transform: rotate(-4deg);
+  }
+  30%,
+  50%,
+  70% {
+    -webkit-transform: rotate(4deg);
+    transform: rotate(4deg);
+  }
+  80% {
+    -webkit-transform: rotate(-2deg);
+    transform: rotate(-2deg);
+  }
+  90% {
+    -webkit-transform: rotate(2deg);
+    transform: rotate(2deg);
+  }
+}
+
+@keyframes shake-top {
+  0%,
+  100% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transform-origin: 50% 0;
+    transform-origin: 50% 0;
+  }
+  10% {
+    -webkit-transform: rotate(2deg);
+    transform: rotate(2deg);
+  }
+  20%,
+  40%,
+  60% {
+    -webkit-transform: rotate(-4deg);
+    transform: rotate(-4deg);
+  }
+  30%,
+  50%,
+  70% {
+    -webkit-transform: rotate(4deg);
+    transform: rotate(4deg);
+  }
+  80% {
+    -webkit-transform: rotate(-2deg);
+    transform: rotate(-2deg);
+  }
+  90% {
+    -webkit-transform: rotate(2deg);
+    transform: rotate(2deg);
+  }
+}
+
 /* * page and container */
 .page {
   max-width: 100%;
@@ -84,48 +222,6 @@ body {
   width: 100%;
   padding: 0 5px;
   margin: 0 auto;
-}
-
-.button {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  max-width: 174px;
-  height: 54px;
-  padding: 17px 24px;
-  background-color: #0075FF;
-  border-radius: 14px;
-  font-size: 1rem;
-  line-height: 1.125rem;
-  color: #FFFFFF;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-}
-
-.button_light {
-  background-color: #FFFFFF;
-  color: #211F54;
-  border: 1px solid #EFF0F6;
-  -webkit-box-shadow: 0px 4px 10px rgba(20, 20, 43, 0.04);
-          box-shadow: 0px 4px 10px rgba(20, 20, 43, 0.04);
-}
-
-@media (min-width: 1000px) {
-  .button:hover {
-    background-color: #FFFFFF;
-    color: #211F54;
-    outline: 1px solid #EFF0F6;
-    -webkit-box-shadow: 0px 4px 10px rgba(20, 20, 43, 0.04);
-            box-shadow: 0px 4px 10px rgba(20, 20, 43, 0.04);
-    -webkit-transition: all 0.6s ease;
-    transition: all 0.6s ease;
-  }
 }
 
 /* * header */
@@ -370,5 +466,97 @@ body {
   .menu__list {
     margin-top: 25vh;
   }
+}
+
+/* * main */
+.main {
+  position: relative;
+}
+
+.main__cover {
+  background: url(../../images/cover_image_1.png) no-repeat;
+  max-width: 100%;
+  background-position: right;
+}
+
+.content-block {
+  max-width: 678px;
+}
+
+.content-block__title {
+  margin-bottom: 20px;
+}
+
+.content-block__title_large {
+  max-width: 518px;
+  font-size: 4.25rem;
+  line-height: 4.625rem;
+  color: #211F54;
+}
+
+.content-block__text {
+  min-width: 474px;
+  font-size: 1.313rem;
+  line-height: 1.875rem;
+  color: #6E7191;
+}
+
+.content-block__controls {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+}
+
+.content-block__contacts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+}
+
+.content-block__button {
+  margin-right: 28px;
+}
+
+.content-block__number {
+  margin-left: 16.5px;
+  position: relative;
+  font-size: 1.75rem;
+  line-height: 2.25rem;
+  color: #211F54;
+  font-weight: 700;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+.content-block__number::before {
+  content: 'Call us now';
+  position: absolute;
+  left: 0;
+  top: -100%;
+  font-size: 1.313rem;
+  line-height: 1.875rem;
+  color: #6E7191;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+}
+
+.info-block {
+  padding: 230px 0 140px 0;
+}
+
+.info-block__content-block > .content-block__text {
+  margin-bottom: 34px;
 }
 /*# sourceMappingURL=style.css.map */
