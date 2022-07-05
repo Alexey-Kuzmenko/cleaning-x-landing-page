@@ -27,7 +27,7 @@
         })
     }
 
-    // * http module
+    // ! http module
     function http() {
         return {
             get(url, callBack) {
