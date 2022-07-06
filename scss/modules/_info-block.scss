@@ -27,3 +27,15 @@
         padding: 90px 0 90px 0;
     }
 }
+
+@include media(width, 280px) {
+    .info-block {
+        &__content-block>.content-block__controls>.content-block__button {
+            margin-right: 0;
+        }
+
+        &__content-block>.content-block__controls>.content-block__contacts>.button_circle {
+            margin-top: 10px;
+        }
+    }
+}

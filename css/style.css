@@ -634,4 +634,13 @@ body {
     padding: 90px 0 90px 0;
   }
 }
+
+@media (width: 280px) {
+  .info-block__content-block > .content-block__controls > .content-block__button {
+    margin-right: 0;
+  }
+  .info-block__content-block > .content-block__controls > .content-block__contacts > .button_circle {
+    margin-top: 10px;
+  }
+}
 /*# sourceMappingURL=style.css.map */
