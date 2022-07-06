@@ -4,7 +4,31 @@
     &__cover {
         background: url(../../images/cover_image_1.png) no-repeat;
         max-width: 100%;
-        // background-size: cover;
         background-position: right;
+    }
+}
+
+// ! media query
+@include media (max-width, 1440px) {
+    .main {
+        &__container {
+            padding: 0 15px;
+        }
+    }
+}
+
+@include media (max-width, 500px) {
+    .main {
+        &__cover {
+            background: none;
+        }
+    }
+}
+
+@include media (max-width, 320px) {
+    .main {
+        &__container {
+            padding: 0 10px;
+        }
     }
 }

@@ -29,6 +29,7 @@
     }
 }
 
+// ! media query
 @include media(max-width, 1200px) {
     .header {
 
@@ -54,6 +55,14 @@
 
         &__cart-block {
             display: none;
+        }
+    }
+}
+
+@include media(max-width, 320px) {
+    .header {
+        &__container {
+            padding: 30px 15px;
         }
     }
 }

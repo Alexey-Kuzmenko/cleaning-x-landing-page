@@ -49,3 +49,39 @@
         }
     }
 }
+
+// ! media query
+@include media (max-width, 768px) {
+    .content-block {
+        &__title_large {
+            font-size: 3.625rem;
+        }
+    }
+}
+
+@include media (max-width, 500px) {
+    .content-block {
+
+        &__title,
+        &_large {
+            text-align: center;
+        }
+
+        &__text {
+            min-width: 200px;
+            text-align: center;
+        }
+    }
+}
+
+@include media (max-width, 375px) {
+    .content-block {
+        &__title_large {
+            font-size: $title-size;
+        }
+
+        &__text {
+            font-size: $subtext-size;
+        }
+    }
+}

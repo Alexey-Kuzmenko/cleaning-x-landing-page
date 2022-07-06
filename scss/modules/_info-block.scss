@@ -5,3 +5,25 @@
         margin-bottom: 34px;
     }
 }
+
+// ! media query
+@include media(max-width, 500px) {
+    .info-block {
+        padding: 100px 0 100px 0;
+
+        &__content-block>.content-block__controls {
+            justify-content: center;
+            align-items: center;
+        }
+
+        &__content-block>.content-block__controls>.content-block__contacts>.content-block__number {
+            display: none;
+        }
+    }
+}
+
+@include media(max-width, 375px) {
+    .info-block {
+        padding: 90px 0 90px 0;
+    }
+}

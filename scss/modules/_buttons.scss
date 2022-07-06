@@ -37,13 +37,11 @@
 
         background-color: $white-color;
         border: 1px solid #DCDDEB;
-
-        -webkit-animation: shake-top 1s cubic-bezier(0.455, 0.030, 0.515, 0.955) infinite both;
-        animation: shake-top 1s cubic-bezier(0.455, 0.030, 0.515, 0.955) infinite both;
     }
 
 }
 
+// ! media query
 @include media (min-width, 1000px) {
     .button {
         &:hover {
@@ -55,12 +53,17 @@
             transition: all 0.6s ease;
         }
 
-        &_circle:hover {
-            background-color: $dark-white-color;
-            transition: all 0.6s ease;
-            outline: 1px solid #EFF0F6;
+        &_circle {
+            -webkit-animation: shake-top 1s cubic-bezier(0.455, 0.030, 0.515, 0.955) infinite both;
+            animation: shake-top 1s cubic-bezier(0.455, 0.030, 0.515, 0.955) infinite both;
 
-            animation-play-state: paused;
+            &:hover {
+                background-color: $dark-white-color;
+                transition: all 0.6s ease;
+                outline: 1px solid #EFF0F6;
+
+                animation-play-state: paused;
+            }
         }
     }
 }
