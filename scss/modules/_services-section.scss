@@ -28,3 +28,22 @@
         }
     }
 }
+
+// ! media query 
+@include media(max-width, 768px) {
+    .services-section {
+        &__controls {
+            flex-direction: column;
+
+            &>a:first-child {
+                margin: 0 0 15px 0;
+            }
+        }
+    }
+}
+
+@include media(max-width, 425px) {
+    .services-section {
+        padding: 90px 0 90px 0;
+    }
+}
