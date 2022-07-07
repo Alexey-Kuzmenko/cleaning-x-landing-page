@@ -53,6 +53,11 @@
             transition: all 0.6s ease;
         }
 
+        &_light:hover {
+            background-color: $blue-color;
+            color: $white-color;
+        }
+
         &_circle {
             -webkit-animation: shake-top 1s cubic-bezier(0.455, 0.030, 0.515, 0.955) infinite both;
             animation: shake-top 1s cubic-bezier(0.455, 0.030, 0.515, 0.955) infinite both;

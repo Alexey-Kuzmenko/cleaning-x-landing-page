@@ -1,0 +1,30 @@
+.services-section {
+    padding: 218px 0 240px 0;
+
+    &__inner-flex-container {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__content-block {
+        max-width: 664px;
+    }
+
+    &__cards-block {
+        margin-top: 58px;
+    }
+
+    &__controls {
+        max-width: 100%;
+        margin-top: 58px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &>a:first-child {
+            margin-right: 28px;
+        }
+    }
+}

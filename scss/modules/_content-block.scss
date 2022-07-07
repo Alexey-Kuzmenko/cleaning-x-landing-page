@@ -3,6 +3,7 @@
 
     &__title {
         margin-bottom: 20px;
+        @include font-style($dark-blue, $title-size, $title-line-height);
 
         &_large {
             max-width: 518px;
@@ -14,6 +15,12 @@
         min-width: 474px;
         @include font-style($grey-color)
     }
+
+    &__title_align-center,
+    &__text_align-center {
+        text-align: center;
+    }
+
 
     &__controls {
         display: flex;
