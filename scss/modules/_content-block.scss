@@ -1,9 +1,21 @@
 .content-block {
     max-width: 678px;
 
+    &_direction-row {
+        width: 100%;
+        max-width: none;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
     &__title {
         margin-bottom: 20px;
         @include font-style($dark-blue, $title-size, $title-line-height);
+
+        &_small {
+            max-width: 475px;
+        }
 
         &_large {
             max-width: 518px;
@@ -60,6 +72,11 @@
 // ! media query
 @include media (max-width, 768px) {
     .content-block {
+
+        &_direction-row {
+            flex-direction: column;
+        }
+
         &__title_large {
             font-size: 3.625rem;
         }
@@ -68,6 +85,10 @@
 
 @include media (max-width, 500px) {
     .content-block {
+
+        &__title {
+            font-size: 2.5rem;
+        }
 
         &__title,
         &_large {

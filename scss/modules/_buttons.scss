@@ -22,7 +22,7 @@
     &_light {
         background-color: $white-color;
         color: $dark-blue;
-        border: 1px solid #EFF0F6;
+        border: 1px solid $border-color;
         box-shadow: 0px 4px 10px rgba(20, 20, 43, 0.04);
     }
 
@@ -47,7 +47,7 @@
         &:hover {
             background-color: $white-color;
             color: $dark-blue;
-            outline: 1px solid #EFF0F6;
+            outline: 1px solid $border-color;
             box-shadow: 0px 4px 10px rgba(20, 20, 43, 0.04);
 
             transition: all 0.6s ease;
@@ -65,7 +65,7 @@
             &:hover {
                 background-color: $dark-white-color;
                 transition: all 0.6s ease;
-                outline: 1px solid #EFF0F6;
+                outline: 1px solid $border-color;
 
                 animation-play-state: paused;
             }

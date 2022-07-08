@@ -1,6 +1,10 @@
 .services-section {
     padding: 218px 0 240px 0;
 
+    &:last-child {
+        padding-top: 0;
+    }
+
     &__inner-flex-container {
         display: flex;
         flex-flow: column nowrap;
@@ -14,6 +18,10 @@
 
     &__cards-block {
         margin-top: 58px;
+
+        &>.cards-block__card_small:nth-child(2) {
+            margin: 0 10px 0 10px;
+        }
     }
 
     &__controls {
