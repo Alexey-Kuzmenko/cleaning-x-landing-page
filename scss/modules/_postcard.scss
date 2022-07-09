@@ -1,0 +1,70 @@
+.postcard {
+    background-color: $dark-blue;
+    border-radius: 24px;
+
+    &__cover {
+        background: url(../../images/cover_image_2.png) no-repeat;
+        background-position: left;
+        background-size: auto;
+
+    }
+
+    &__inner-flex-container {
+        width: 100%;
+        padding: 137.5px 74px 137.5px 0px;
+        display: flex;
+        justify-content: right;
+        align-items: center;
+
+    }
+
+    &__content-block {
+        max-width: 556px;
+
+        &>.content-block__text_light {
+            margin-bottom: 11px;
+        }
+    }
+}
+
+// ! media query
+@include media (max-width, 768px) {
+    .postcard {
+        &__cover {
+            background: none;
+        }
+
+        &__inner-flex-container {
+            padding: 30px 15px;
+            justify-content: center;
+        }
+
+        &__content-block {
+            &>.content-block__controls>.content-block__contacts>.content-block__number_light {
+                display: none;
+            }
+
+            &>.content-block__controls {
+                justify-content: center;
+                align-items: center;
+            }
+
+        }
+    }
+}
+
+@include media (max-width, 425px) {
+    .postcard {
+        &__content-block>.content-block__controls {
+            flex-direction: column;
+
+            &>.content-block__button {
+                margin-right: 0;
+            }
+
+            &>.content-block__contacts>.button_circle {
+                margin-top: 10px;
+            }
+        }
+    }
+}
