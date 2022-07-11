@@ -1,0 +1,40 @@
+.features-block {
+    padding-top: 200px;
+
+    &__cover {
+        background: url(../../images/home_image.png) no-repeat;
+        background-position: left;
+    }
+
+    &__inner-flex-container {
+        width: 100%;
+        padding: 60px 0;
+
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+    &__content-block {
+        max-width: 500px;
+    }
+}
+
+// !media query
+@include media (max-width, 768px) {
+    .features-block {
+        &__cover {
+            background: none;
+        }
+
+        &__inner-flex-container {
+            justify-content: center;
+        }
+    }
+}
+
+@include media (max-width, 375px) {
+    .features-block {
+        padding-top: 90px;
+    }
+}

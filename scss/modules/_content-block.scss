@@ -77,9 +77,56 @@
             color: $white-color;
         }
     }
+
+    &__items {
+        display: flex;
+        align-items: center;
+        margin: 26px 0 48px 0;
+    }
+
+    &__items-list:last-child {
+        margin-left: 56px;
+    }
+
+    &__list-item {
+        position: relative;
+        margin-bottom: 23px;
+        cursor: default;
+
+        @include font-style($dark-blue, $subtext-size, 1.25rem);
+        font-weight: 700;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        &::before {
+            content: url(../../images/icons/checked_icon.png);
+            position: absolute;
+            left: -35px;
+            top: calc(50% - 26px/2);
+
+        }
+    }
+
 }
 
 // ! media query
+@include media(min-width, 1000px) {
+    .content-block {
+        &__list-item {
+            &::before {
+                -webkit-animation: heartbeat 1.5s ease-in-out infinite both;
+                animation: heartbeat 1.5s ease-in-out infinite both;
+            }
+
+            &:hover {
+                animation-play-state: paused;
+            }
+        }
+    }
+}
+
 @include media (max-width, 768px) {
     .content-block {
 
@@ -120,6 +167,15 @@
 
         &__text {
             font-size: $subtext-size;
+        }
+
+        &__items {
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        &__items-list:last-child {
+            margin: 35px 0 0 0;
         }
     }
 }
