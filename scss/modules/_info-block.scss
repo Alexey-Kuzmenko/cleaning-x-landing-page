@@ -1,8 +1,21 @@
 .info-block {
     padding: 230px 0 140px 0;
 
-    &__content-block>.content-block__text {
-        margin-bottom: 34px;
+    &__content-block {
+        max-width: 678px;
+
+        &>.content-block__text {
+            margin-bottom: 34px;
+        }
+    }
+
+    &__content-block_second {
+        max-width: 540px;
+
+        &>p {
+            @include font-style($text-color, 0.75rem);
+            margin-bottom: 26px;
+        }
     }
 }
 
@@ -11,13 +24,27 @@
     .info-block {
         padding: 100px 0 100px 0;
 
-        &__content-block>.content-block__controls {
-            justify-content: center;
-            align-items: center;
+        &__content-block {
+
+            &>.content-block__controls {
+                justify-content: center;
+                align-items: center;
+            }
+
+            &>.content-block__controls>.content-block__contacts>.content-block__number {
+                display: none;
+            }
+
         }
 
-        &__content-block>.content-block__controls>.content-block__contacts>.content-block__number {
-            display: none;
+        &__content-block_second {
+            &>p {
+                text-align: center;
+            }
+
+            &>.content-block__desc {
+                margin-bottom: 75px;
+            }
         }
     }
 }

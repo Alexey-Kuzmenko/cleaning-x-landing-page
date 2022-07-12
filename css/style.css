@@ -585,6 +585,11 @@ body {
   background-position: right;
 }
 
+.main__cover_second {
+  background: url(../../images/cover_image_3.png) no-repeat;
+  background-position: right;
+}
+
 @media (max-width: 1440px) {
   .main__container {
     padding: 0 15px;
@@ -601,10 +606,6 @@ body {
   .main__container {
     padding: 0 10px;
   }
-}
-
-.content-block {
-  max-width: 678px;
 }
 
 .content-block_direction-row {
@@ -744,6 +745,57 @@ body {
   top: calc(50% - 26px/2);
 }
 
+.content-block__desc {
+  margin-bottom: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.content-block__num {
+  position: relative;
+  font-size: 3.375rem;
+  line-height: 4.125rem;
+  color: #211F54;
+  font-weight: 700;
+}
+
+.content-block__num:nth-child(2) {
+  margin: 0 38px;
+}
+
+.content-block__num::before {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+  color: #6E7191;
+  font-weight: 700;
+}
+
+.content-block__num:first-child::before {
+  content: 'Years';
+}
+
+.content-block__num:nth-child(2)::before {
+  content: 'Clients';
+}
+
+.content-block__num:last-child::before {
+  content: 'Jobs done';
+}
+
+.content-block__plus {
+  color: #0075FF;
+}
+
 @media (min-width: 1000px) {
   .content-block__list-item::before {
     -webkit-animation: heartbeat 1.5s ease-in-out infinite both;
@@ -778,6 +830,17 @@ body {
     min-width: 200px;
     text-align: center;
   }
+  .content-block__desc {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .content-block__num {
+    font-size: 2.75rem;
+  }
+  .content-block__num:nth-child(2) {
+    margin: 0 28px;
+  }
 }
 
 @media (max-width: 375px) {
@@ -801,12 +864,36 @@ body {
   }
 }
 
+@media (max-width: 320px) {
+  .content-block__num {
+    font-size: 2.125rem;
+  }
+  .content-block__num::before {
+    font-size: 1rem;
+  }
+}
+
 .info-block {
   padding: 230px 0 140px 0;
 }
 
+.info-block__content-block {
+  max-width: 678px;
+}
+
 .info-block__content-block > .content-block__text {
   margin-bottom: 34px;
+}
+
+.info-block__content-block_second {
+  max-width: 540px;
+}
+
+.info-block__content-block_second > p {
+  font-size: 0.75rem;
+  line-height: 1.875rem;
+  color: #6E7191;
+  margin-bottom: 26px;
 }
 
 @media (max-width: 500px) {
@@ -823,6 +910,12 @@ body {
   }
   .info-block__content-block > .content-block__controls > .content-block__contacts > .content-block__number {
     display: none;
+  }
+  .info-block__content-block_second > p {
+    text-align: center;
+  }
+  .info-block__content-block_second > .content-block__desc {
+    margin-bottom: 75px;
   }
 }
 
@@ -1156,6 +1249,11 @@ body {
 @media (max-width: 375px) {
   .features-block {
     padding-top: 90px;
+  }
+  .features-block__content-block > .content-block__controls {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 /*# sourceMappingURL=style.css.map */

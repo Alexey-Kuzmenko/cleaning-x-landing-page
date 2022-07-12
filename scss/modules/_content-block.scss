@@ -1,5 +1,5 @@
 .content-block {
-    max-width: 678px;
+    // max-width: 678px;
 
     &_direction-row {
         width: 100%;
@@ -109,6 +109,49 @@
         }
     }
 
+    &__desc {
+        margin-bottom: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    &__num {
+        position: relative;
+        @include font-style($dark-blue, 3.375rem, 4.125rem);
+        font-weight: 700;
+
+        &:nth-child(2) {
+            margin: 0 38px;
+        }
+
+        &::before {
+            position: absolute;
+            left: 0;
+            top: 100%;
+
+            @include font-style($grey-color, $subtext-size, 1.5rem);
+            font-weight: 700;
+        }
+
+        &:first-child::before {
+            content: 'Years';
+        }
+
+        &:nth-child(2)::before {
+            content: 'Clients';
+        }
+
+        &:last-child::before {
+            content: 'Jobs done';
+        }
+
+    }
+
+    &__plus {
+        color: $blue-color;
+    }
+
 }
 
 // ! media query
@@ -156,6 +199,18 @@
             min-width: 200px;
             text-align: center;
         }
+
+        &__desc {
+            justify-content: center;
+        }
+
+        &__num {
+            font-size: 2.75rem;
+
+            &:nth-child(2) {
+                margin: 0 28px;
+            }
+        }
     }
 }
 
@@ -176,6 +231,18 @@
 
         &__items-list:last-child {
             margin: 35px 0 0 0;
+        }
+    }
+}
+
+@include media (max-width, 320px) {
+    .content-block {
+        &__num {
+            font-size: 2.125rem;
+
+            &::before {
+                font-size: 1rem;
+            }
         }
     }
 }

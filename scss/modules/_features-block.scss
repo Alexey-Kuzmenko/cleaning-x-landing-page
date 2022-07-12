@@ -36,5 +36,11 @@
 @include media (max-width, 375px) {
     .features-block {
         padding-top: 90px;
+
+        &__content-block {
+            &>.content-block__controls {
+                justify-content: center;
+            }
+        }
     }
 }
