@@ -1,6 +1,10 @@
 .info-block {
     padding: 230px 0 140px 0;
 
+    &_second {
+        padding: 230px 0 0 0;
+    }
+
     &__content-block {
         max-width: 678px;
 
@@ -51,7 +55,7 @@
 
 @include media(max-width, 375px) {
     .info-block {
-        padding: 90px 0 90px 0;
+        padding: 90px 0 0 0;
     }
 }
 
