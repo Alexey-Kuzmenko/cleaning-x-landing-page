@@ -11,6 +11,14 @@
             background-position: right;
         }
     }
+
+    &__container_margin-top {
+        margin-top: 240px;
+    }
+
+    &__color-cover {
+        background-color: $dark-white-color;
+    }
 }
 
 // ! media query

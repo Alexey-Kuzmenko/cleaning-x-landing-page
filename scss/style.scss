@@ -2,7 +2,7 @@
 @import 'base/mixins';
 @import 'base/templates';
 
-/* * font */
+/* * fonts */
 @import 'base/fonts';
 
 /* * reset and root elements */
@@ -30,3 +30,5 @@
 @import 'modules/postcard';
 @import 'modules/features-block';
 @import 'modules/articles-block';
+@import 'modules/form';
+@import 'modules/form-block';
