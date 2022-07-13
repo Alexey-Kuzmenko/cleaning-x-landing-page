@@ -1,13 +1,13 @@
 /* * font */
 @font-face {
   font-family: "Roboto";
-  src: url(../../fonts/Roboto-Regular.woff) format("woff");
+  src: url(../fonts/Roboto-Regular.woff) format("woff");
   font-style: normal;
   font-weight: 400;
 }
 @font-face {
   font-family: "Roboto";
-  src: url(../../fonts/Roboto-Bold.woff) format("woff");
+  src: url(../fonts/Roboto-Bold.woff) format("woff");
   font-style: bold;
   font-weight: 700;
 }
@@ -99,7 +99,7 @@ body {
   height: 71px;
   border-radius: 50%;
   padding: 35px;
-  background: url(../../images/icons/phone_icon.svg) no-repeat;
+  background: url(../images/icons/phone_icon.svg) no-repeat;
   background-position: center;
   background-color: #FFFFFF;
   border: 1px solid #DCDDEB;
@@ -458,12 +458,12 @@ body {
   position: relative;
 }
 .main__cover {
-  background: url(../../images/cover_image_1.png) no-repeat;
+  background: url(../images/cover_image_1.png) no-repeat;
   max-width: 100%;
   background-position: right;
 }
 .main__cover_second {
-  background: url(../../images/cover_image_3.png) no-repeat;
+  background: url(../images/cover_image_3.png) no-repeat;
   background-position: right;
 }
 
@@ -573,7 +573,7 @@ body {
   margin-bottom: 0;
 }
 .content-block__list-item::before {
-  content: url(../../images/icons/checked_icon.png);
+  content: url(../images/icons/checked_icon.png);
   position: absolute;
   left: -35px;
   top: calc(50% - 13px);
@@ -897,7 +897,7 @@ body {
   border-radius: 24px;
 }
 .postcard__cover {
-  background: url(../../images/cover_image_2.png) no-repeat;
+  background: url(../images/cover_image_2.png) no-repeat;
   background-position: left;
   background-size: auto;
 }
@@ -946,7 +946,7 @@ body {
   padding-top: 200px;
 }
 .features-block__cover {
-  background: url(../../images/home_image.png) no-repeat;
+  background: url(../images/home_image.png) no-repeat;
   background-position: left;
 }
 .features-block__inner-flex-container {
