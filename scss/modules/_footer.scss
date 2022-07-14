@@ -1,0 +1,127 @@
+.footer {
+    &__inner-flex-container {
+        width: 100%;
+        padding: 140px 0 255px 0;
+        display: flex;
+        align-items: baseline;
+        justify-content: center
+    }
+
+    &__title {
+        @include font-style($dark-blue, 1.25rem, 1.375rem);
+        font-weight: 700;
+
+        &_large {
+            font-size: $subtitle-size;
+            line-height: $subtitle-line-height;
+            margin-bottom: 7px
+        }
+
+        &_margin-bottom {
+            margin-bottom: 28px;
+        }
+    }
+
+    &__text {
+        @include font-style($text-color, $subtext-size);
+
+        &_margin-bottom {
+            margin-bottom: 18px
+        }
+    }
+
+    &__number {
+        @include font-style($blue-color, 1.162rem, 2.52rem);
+        font-weight: 700;
+    }
+
+    &__button {
+        max-width: 256px;
+    }
+
+    &__content,
+    &__meta-block,
+    &__contacts {
+        max-width: 312px;
+    }
+
+    &__hours-block {
+        min-width: 164px;
+    }
+
+    &__content,
+    &__meta-block,
+    &__hours-block {
+        margin-right: 40px;
+    }
+
+    &__curb {
+        width: 100%;
+        padding: 30px 0;
+        align-items: center;
+        justify-content: space-between;
+        display: flex;
+
+        border-top: 1px solid #EFF0F6;
+
+        @include font-style ($text-color, $subtext-size)
+    }
+
+    &__link {
+        color: $blue-color;
+        text-decoration: underline !important;
+    }
+}
+
+// ! media query 
+@include media (max-width, 1440px) {
+    .footer {
+
+        &__content,
+        &__meta-block,
+        &__hours-block {
+            margin-right: 20px;
+        }
+    }
+}
+
+@include media (max-width, 1024px) {
+    .footer {
+        &__content {
+            display: none;
+        }
+
+        &__curb {
+            flex-direction: column;
+        }
+
+        &__logo {
+            margin-bottom: 10px;
+        }
+    }
+}
+
+@include media (max-width, 768px) {
+    .footer {
+        &__contacts {
+            display: none;
+        }
+
+        &__curb {
+            text-align: center;
+        }
+    }
+}
+
+@include media (max-width, 424px) {
+    .footer {
+        &__inner-flex-container {
+            flex-direction: column;
+            padding: 90px 10px;
+        }
+
+        &__meta-block {
+            margin-bottom: 45px;
+        }
+    }
+}
