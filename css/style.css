@@ -473,6 +473,11 @@ body {
   background-color: #F7F9FC;
 }
 
+@media (min-width: 1440px) {
+  .main__container_margin-bottom {
+    margin-bottom: 600px;
+  }
+}
 @media (max-width: 1440px) {
   .main__container {
     padding: 0 15px;
@@ -831,6 +836,7 @@ body {
   line-height: 2.125rem;
   color: #211F54;
   margin-bottom: 13px;
+  cursor: default;
 }
 .cards-block__card-title_large {
   font-size: 1.75rem;
@@ -843,6 +849,7 @@ body {
   line-height: 1.875rem;
   color: #6E7191;
   text-align: center;
+  cursor: default;
 }
 .cards-block__card-title_align-left, .cards-block__card-text_align-left {
   text-align: left;
@@ -1169,5 +1176,14 @@ body {
   }
   .form-block__form {
     margin: 45px 0 0 0;
+  }
+}
+@media (max-width: 425px) {
+  .form-block__content-block > .content-block__controls,
+.form-block__content-block > .content-block__contacts {
+    justify-content: center;
+  }
+  .form-block__content-block > .content-block__contacts > .content-block__number {
+    display: none;
   }
 }/*# sourceMappingURL=style.css.map */

@@ -22,6 +22,16 @@
 }
 
 // ! media query
+@include media (min-width, 1440px) {
+    .main {
+        &__container {
+            &_margin-bottom {
+                margin-bottom: 600px;
+            }
+        }
+    }
+}
+
 @include media (max-width, 1440px) {
     .main {
         &__container {

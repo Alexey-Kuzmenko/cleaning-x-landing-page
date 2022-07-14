@@ -53,3 +53,19 @@
         }
     }
 }
+
+@include media (max-width, 425px) {
+    .form-block {
+        &__content-block {
+
+            >.content-block__controls,
+            >.content-block__contacts {
+                justify-content: center;
+            }
+
+            >.content-block__contacts>.content-block__number {
+                display: none;
+            }
+        }
+    }
+}

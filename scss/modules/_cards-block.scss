@@ -55,6 +55,7 @@
         text-align: center;
         @include font-style($dark-blue, $subtitle-size, $subtitle-line-height);
         margin-bottom: 13px;
+        cursor: default;
 
         &_large {
             @include font-style($dark-blue, $subtitle-size, 2.25rem);
@@ -65,6 +66,7 @@
     &__card-text {
         @include font-style($text-color, $text-size, $text-line-height);
         text-align: center;
+        cursor: default;
     }
 
     &__card-title_align-left,
