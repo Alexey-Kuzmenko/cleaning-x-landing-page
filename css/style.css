@@ -1283,4 +1283,41 @@ body {
   .footer__meta-block {
     margin-bottom: 45px;
   }
+}
+/* * to top button */
+.to-top-btn {
+  width: 60px;
+  height: 60px;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #F7F9FC;
+  border-radius: 50%;
+  border: 1px solid #EFF0F6;
+  position: fixed;
+  bottom: 10%;
+  right: 5%;
+}
+.to-top-btn__image {
+  transition: transform 0.3s ease;
+}
+
+@media (min-width: 1000px) {
+  .to-top-btn {
+    opacity: 0.5;
+  }
+  .to-top-btn:hover {
+    opacity: 1;
+    transition: all 0.3s ease;
+  }
+  .to-top-btn__image:hover {
+    transform: translateY(-5px);
+    transition: transform 0.6s ease;
+  }
+}
+@media (max-width: 1024px) {
+  .to-top-btn {
+    opacity: 0.7;
+  }
 }/*# sourceMappingURL=style.css.map */

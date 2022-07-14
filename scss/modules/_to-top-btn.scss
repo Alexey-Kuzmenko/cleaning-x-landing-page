@@ -1,0 +1,46 @@
+.to-top-btn {
+    width: 60px;
+    height: 60px;
+    z-index: 10;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: $dark-white-color;
+
+    border-radius: 50%;
+    border: 1px solid #EFF0F6;
+
+    position: fixed;
+    bottom: 10%;
+    right: 5%;
+
+    &__image {
+        transition: transform 0.3s ease;
+    }
+}
+
+// ! media query 
+@include media (min-width, 1000px) {
+    .to-top-btn {
+
+        opacity: 0.5;
+
+        &:hover {
+            opacity: 1;
+            transition: all 0.3s ease;
+        }
+
+        &__image:hover {
+            transform: translateY(-5px);
+            transition: transform 0.6s ease;
+        }
+    }
+}
+
+@include media(max-width, 1024px) {
+    .to-top-btn {
+        opacity: 0.7;
+    }
+}
