@@ -19,7 +19,6 @@
             menu.classList.toggle('menu__body_active')
             setBodyScroll(menu)
         } else if (e.target.classList.contains('menu__link')) {
-            e.preventDefault()
             e.target.classList.add('menu__link_active')
             checkHeaderLinksClass(e.target, headerLinks)
         }
@@ -58,6 +57,10 @@
             top: 0,
             behavior: "smooth"
         })
+
+        const homeLink = headerLinks[0]
+        homeLink.classList.add('menu__link_active')
+        checkHeaderLinksClass(homeLink, headerLinks)
     }
 
     // ! popup windows 

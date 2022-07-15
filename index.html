@@ -31,11 +31,11 @@
 
                         <nav class="menu__body">
                             <ul class="menu__list">
-                                <li><a class="menu__link" href="#">Home</a> </li>
-                                <li><a class="menu__link" href="#">About</a></li>
-                                <li><a class="menu__link" href="#">Services</a></li>
-                                <li><a class="menu__link" href="#">Pages</a></li>
-                                <li><a class="menu__link" href="#">Contact</a></li>
+                                <li><a class="menu__link menu__link_active" href="#">Home</a> </li>
+                                <li><a class="menu__link" href="#about">About</a></li>
+                                <li><a class="menu__link" href="#services">Services</a></li>
+                                <li><a class="menu__link" href="#articles">Pages</a></li>
+                                <li><a class="menu__link" href="#form-block">Contact</a></li>
                             </ul>
                         </nav>
 
@@ -43,7 +43,7 @@
 
                     <div class="header__cart-block">
                         <span>Cart (0)</span>
-                        <a class="header__button button button_small" href="#">Get a free quote</a>
+                        <a class="header__button button button_small" href="#form-block">Get a free quote</a>
                     </div>
 
                 </div> <!-- * .header__flex-container -->
@@ -75,7 +75,7 @@
                             </div>
 
                             <div class="content-block__controls">
-                                <a href="#" class="content-block__button button">Get a free quote</a>
+                                <a href="#form-block" class="content-block__button button">Get a free quote</a>
                                 <div class="content-block__contacts">
                                     <a href="tel:+14145672109" class="button button_circle"></a>
                                     <a href="tel:+14145672109" class="content-block__number">(414) 567 - 2109</a>
@@ -97,7 +97,7 @@
 
                     <div class="services-section__inner-flex-container">
 
-                        <div class="services-section__content-block contetn-block">
+                        <div class="services-section__content-block contetn-block" id="about">
 
                             <h1 class="content-block__title content-block__title_align-center">How our service works?
                             </h1>
@@ -139,8 +139,8 @@
                         </div> <!-- ! .services-section__cards-block -->
 
                         <div class="services-section__controls">
-                            <a href="#" class="button">Get a free quote</a>
-                            <a href="#" class="button button_light">Explore services</a>
+                            <a href="#form-block" class="button">Get a free quote</a>
+                            <a href="#features" class="button button_light">Explore services</a>
                         </div>
 
                     </div> <!-- * .services-section__inner-flex-container -->
@@ -151,10 +151,10 @@
 
                     <div class="services-section__inner-flex-container">
 
-                        <div class="content-block content-block_direction-row">
+                        <div class="content-block content-block_direction-row" id="services">
                             <h1 class="content-block__title content-block__title_small">Take a look at our professional
                                 services</h1>
-                            <a href="#" class="button button_light">Explore services</a>
+                            <a href="#features" class="button button_light">Explore services</a>
                         </div>
 
                         <div class="services-section__cards-block cards-block cards-block_no-wrap">
@@ -212,7 +212,7 @@
                                 </div>
 
                                 <div class="content-block__controls">
-                                    <a href="#" class="content-block__button button">Get a free quote</a>
+                                    <a href="#form-block" class="content-block__button button">Get a free quote</a>
                                     <div class="content-block__contacts">
                                         <a href="tel:+14145672109" class="button button_circle"></a>
                                         <a href="tel:+14145672109"
@@ -230,7 +230,7 @@
 
                 <div class="main__features-block features-block">
 
-                    <div class="features-block__cover">
+                    <div class="features-block__cover" id="features">
 
                         <div class="features-block__inner-flex-container">
 
@@ -259,7 +259,7 @@
                                 </div>
 
                                 <div class="content-block__controls">
-                                    <a href="#" class="button">Get a free quote</a>
+                                    <a href="#form-block" class="button">Get a free quote</a>
                                 </div>
 
                             </div> <!-- * .features-block__cover -->
@@ -295,7 +295,7 @@
                             </div>
 
                             <div class="content-block__controls">
-                                <a href="#" class="button">Get a free quote</a>
+                                <a href="#form-block" class="button">Get a free quote</a>
                             </div>
                         </div>
 
@@ -305,11 +305,11 @@
 
                 <section class="main__articles-block articles-block">
 
-                    <div class="articles-block__content-block content-block content-block_direction-row">
+                    <div class="articles-block__content-block content-block content-block_direction-row" id="articles">
                         <h1 class="content-block__title">Articles & resources</h1>
 
                         <div class="content-block__controls">
-                            <a href="#" class="button">Get a free quote</a>
+                            <a href="#form-block" class="button">Get a free quote</a>
                             <a href="#" class="button button_light">Browse articles</a>
                         </div>
                     </div>
@@ -362,7 +362,7 @@
 
                 <div class="main__container main__container_margin-top container">
 
-                    <section class="main__form-block form-block">
+                    <section class="main__form-block form-block" id="form-block">
 
                         <div class="form-block__inner-flex-container">
 
@@ -505,7 +505,7 @@
                         <div class="footer__text footer__text_margin-bottom">
                             <p>Lorem ipsum dolor sit amet ectetur adipiscing elit, sed do eiusmod.</p>
                         </div>
-                        <a href="#" class="footer__button button">Request a free quote</a>
+                        <a href="#form-block" class="footer__button button">Request a free quote</a>
                     </div>
 
                 </div>
