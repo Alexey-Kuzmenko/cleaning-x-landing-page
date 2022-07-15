@@ -5,6 +5,11 @@
     const header = document.querySelector('.header')
     const headerLinks = document.querySelectorAll('.menu__link')
     const menu = document.querySelector('.menu__body')
+    const toTopBtn = document.querySelector('.to-top-btn')
+
+    // ! function calling
+    window.addEventListener('scroll', renderToTopBtn, false)
+    toTopBtn.addEventListener('click', onToTopBtnClickHandler, false)
 
 
     // * menu icon handler
@@ -12,6 +17,7 @@
         if (e.target.classList.contains('menu__icon')) {
             e.target.classList.toggle('menu__icon_active')
             menu.classList.toggle('menu__body_active')
+            setBodyScroll(menu)
         } else if (e.target.classList.contains('menu__link')) {
             e.preventDefault()
             e.target.classList.add('menu__link_active')
@@ -28,6 +34,31 @@
         })
     }
 
+    function setBodyScroll(element) {
+        if (element.classList.contains('menu__body_active')) {
+            body.dataset.bodyScroll = false
+        } else {
+            body.dataset.bodyScroll = true
+        }
+
+    }
+
+
+    // * to top button functionality
+    function renderToTopBtn() {
+        if (body.scrollTo > 20 || document.documentElement.scrollTop > 20) {
+            toTopBtn.classList.add('to-top-btn_active')
+        } else {
+            toTopBtn.classList.remove('to-top-btn_active')
+        }
+    }
+
+    function onToTopBtnClickHandler() {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        })
+    }
 
     // ! popup windows 
     const cookiePopupData = {
