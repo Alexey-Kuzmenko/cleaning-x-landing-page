@@ -2,11 +2,13 @@
 
     // * UI elements
     const body = document.body
+    const page = document.querySelector('.page')
     const header = document.querySelector('.header')
     const headerLinks = document.querySelectorAll('.menu__link')
     const menu = document.querySelector('.menu__body')
     const toTopBtn = document.querySelector('.to-top-btn')
     const cart = document.querySelector('#cart-value')
+    const popup = document.querySelector('.popup')
     // * form and forms elements
     const form = document.querySelector('.form')
     const formInputs = form.elements
@@ -17,6 +19,11 @@
     window.addEventListener('scroll', renderToTopBtn, false)
     toTopBtn.addEventListener('click', onToTopBtnClickHandler, false)
     formBtn.addEventListener('click', onSubmitHandler, false)
+    document.addEventListener('DOMContentLoaded', () => {
+        popup.classList.add('popup_open')
+        setBodyScroll(popup)
+    })
+    popup.addEventListener('click', popupHandler, false)
 
 
     // * header handler
@@ -44,7 +51,7 @@
     }
 
     function setBodyScroll(element) {
-        if (element.classList.contains('menu__body_active')) {
+        if (element.classList.contains('menu__body_active') || element.classList.contains('popup_open')) {
             body.dataset.bodyScroll = false
         } else {
             body.dataset.bodyScroll = true
@@ -94,7 +101,6 @@
             .then(response => showResponseAlert(null, JSON.parse(response)))
             .catch(error => showResponseAlert(error))
         form.reset()
-        changeCartValue()
     }
 
 
@@ -173,6 +179,8 @@
             alert(`Error! error status: ${err}`)
         }
         alert(`Server response: ${response}`)
+        changeCartValue()
+        renderPopupWindow(popupData)
     }
 
     // * cart functionality
@@ -185,11 +193,84 @@
     }
 
     // ! popup windows 
-    const cookiePopupData = {
-        title: 'Cookies Settings',
-        text: 'We use cookies and similar technologies to help personalize content, tailor and measure ads, and provide a better experience. By clicking accept, you agree to this, as outlined in our Cookie Policy.',
-        buttonsText: ['Accept', 'Preferences'],
-        controlsText: ['Necessary', 'Statistics', 'Marketing']
+    function renderPopupWindow(data) {
+        const popupAlert = popupTemplate(data)
+        page.insertAdjacentElement('beforeend', popupAlert)
+        popupAlert.addEventListener('click', ({ target }) => {
+            if (target.tagName === "BUTTON") {
+                popupAlert.remove()
+            }
+        }, false)
+    }
+
+    const popupData = {
+        title: 'Success!',
+        text: 'Your application has been processed, later we will send you a confirmation on your e-mail and mobile number. Thank you for your time! Cleaning X team.',
+        buttonText: 'Close',
+    }
+
+
+    function popupTemplate(popupData) {
+
+        const { title, text, buttonText } = popupData
+
+        let popupElements = []
+
+        // * popup 
+        const popup = document.createElement('div')
+        popup.classList.add('popup')
+        popup.classList.add('popup_open')
+
+        // * popup body
+        const popupBody = document.createElement('div')
+        popupBody.classList.add('popup__body')
+
+        // * popup content
+        const popupContent = document.createElement('div')
+        popupContent.classList.add('popup__content')
+
+        // * popup elements
+        const popupTitle = document.createElement('h1')
+        popupTitle.classList.add('popup__title')
+        popupTitle.textContent = title
+        popupElements.push(popupTitle)
+
+        // * popup elements
+        const popupText = document.createElement('div')
+        popupText.classList.add('popup__text')
+        popupText.textContent = text
+        popupElements.push(popupText)
+
+        // * popup button
+        const popupButton = document.createElement('button')
+        popupButton.classList.add('button')
+        popupButton.classList.add('popup__button')
+        popupButton.textContent = buttonText
+        popupButton.dataset.btnType = 'close'
+
+        // * popup buttons
+        const popupButtons = document.createElement('div')
+        popupButtons.appendChild(popupButton)
+        popupButtons.classList.add('popup__buttons')
+        popupElements.push(popupButtons)
+
+        popupElements.forEach(el => {
+            popupContent.appendChild(el)
+        })
+
+        popupBody.appendChild(popupContent)
+        popup.appendChild(popupBody)
+
+        return popup
+    }
+
+    function popupHandler({ target }) {
+        if (target.dataset.btnType === 'close') {
+            popup.remove()
+            body.dataset.bodyScroll = true
+        } else if (target.dataset.btnType === 'settings') {
+            popup.querySelector('.popup__controls').classList.toggle('popup__controls_open')
+        }
     }
 
 })()
