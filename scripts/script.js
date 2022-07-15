@@ -38,6 +38,7 @@
 
             body.querySelector('.menu__icon').classList.remove('menu__icon_active')
             menu.classList.remove('menu__body_active')
+            body.dataset.bodyScroll = true
         }
     })
 
