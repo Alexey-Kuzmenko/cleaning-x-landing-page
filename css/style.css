@@ -67,6 +67,9 @@ body {
   font-style: normal;
   font-weight: 400;
 }
+body[data-body-scroll=false] {
+  overflow-y: hidden;
+}
 
 /* general modues */
 .button {
@@ -1289,6 +1292,7 @@ body {
   width: 60px;
   height: 60px;
   z-index: 10;
+  visibility: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1298,6 +1302,9 @@ body {
   position: fixed;
   bottom: 10%;
   right: 5%;
+}
+.to-top-btn_active {
+  visibility: visible;
 }
 .to-top-btn__image {
   transition: transform 0.3s ease;
@@ -1320,4 +1327,139 @@ body {
   .to-top-btn {
     opacity: 0.7;
   }
+}
+/* * popup window */
+.popup {
+  top: 0;
+  left: 0;
+  position: fixed;
+  z-index: 11;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+.popup_open {
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.3s ease;
+}
+.popup__body {
+  min-height: 100%;
+  padding: 30px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.popup__content {
+  position: relative;
+  max-width: 600px;
+  padding: 40px 20px;
+  height: auto;
+  background-color: #FFFFFF;
+  border-radius: 16px;
+}
+.popup__title {
+  margin-bottom: 15px;
+  font-size: 1.75rem;
+  line-height: 2.125rem;
+  color: #211F54;
+  font-weight: 700;
+}
+.popup__text {
+  font-size: 1.313rem;
+  line-height: 1.875rem;
+  color: #211F54;
+  font-weight: 700;
+}
+.popup__controls {
+  width: 100%;
+  margin-top: 15px;
+  display: none;
+}
+.popup__controls_open {
+  display: block;
+}
+.popup__item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.popup__item:nth-child(2) {
+  margin: 10px 0;
+}
+.popup__buttons {
+  margin-top: 15px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-flow: row wrap;
+}
+.popup__button {
+  height: 65px;
+  border: none;
+}
+
+@media (max-width: 350px) {
+  .popup__button:last-child {
+    margin-top: 10px;
+  }
+}
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #0075FF;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #0075FF;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
 }/*# sourceMappingURL=style.css.map */

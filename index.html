@@ -10,7 +10,7 @@
     <title>Cleaning X</title>
 </head>
 
-<body>
+<body data-body-scroll="true">
     <div class="page">
 
         <header class="header">
@@ -528,12 +528,62 @@
 
         </footer> <!-- ! .footer -->
 
+        <div class="popup">
+            <div class="popup__body">
+                <div class="popup__content">
+                    <h1 class="popup__title">Cookies</h1>
+                    <div class="popup__text">
+                        <p> We use cookies and similar technologies to help personalize content, tailor and measure ads,
+                            and provide a better experience. By clicking accept, you agree to this, as outlined in our
+                            Cookie Policy</p>
+                    </div>
+
+                    <div class="popup__controls popup__controls_open">
+                        <div class="popup__item">
+                            <label class="switch">
+                                <input type="checkbox">
+                                <span class="slider round"></span>
+                            </label>
+
+                            <p class="popup__text">Necessary</p>
+
+                        </div>
+
+                        <div class="popup__item">
+                            <label class="switch">
+                                <input type="checkbox">
+                                <span class="slider round"></span>
+                            </label>
+
+                            <p class="popup__text">Statistics</p>
+
+                        </div>
+
+                        <div class="popup__item">
+                            <label class="switch">
+                                <input type="checkbox">
+                                <span class="slider round"></span>
+                            </label>
+
+                            <p class="popup__text">Marketing</p>
+
+                        </div>
+                    </div>
+
+                    <div class="popup__buttons">
+                        <button class="popup__button button">Accept</button>
+                        <button class="popup__button button">Preferences</button>
+                    </div>
+
+                </div>
+            </div>
+        </div> <!-- ! .popup -->
+
         <div class="to-top-btn">
             <img src="images/icons/caret-up.svg" alt="up arrow" class="to-top-btn__image">
-        </div>
+        </div> <!-- * .to-top-btn -->
 
     </div> <!-- ! .page -->
-
 
     <script src="scripts/script.js"></script>
 </body>

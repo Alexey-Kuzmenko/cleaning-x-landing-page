@@ -8,4 +8,8 @@ body {
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
+
+    &[data-body-scroll="false"] {
+        overflow-y: hidden;
+    }
 }

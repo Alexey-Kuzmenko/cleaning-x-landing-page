@@ -1,4 +1,5 @@
 (function () {
+
     // * UI elements
     const body = document.body
     const header = document.querySelector('.header')
@@ -25,6 +26,15 @@
                 link.classList.remove('menu__link_active')
             }
         })
+    }
+
+
+    // ! popup windows 
+    const cookiePopupData = {
+        title: 'Cookies Settings',
+        text: 'We use cookies and similar technologies to help personalize content, tailor and measure ads, and provide a better experience. By clicking accept, you agree to this, as outlined in our Cookie Policy.',
+        buttonsText: ['Accept', 'Preferences'],
+        controlsText: ['Necessary', 'Statistics', 'Marketing']
     }
 
     // ! http module
