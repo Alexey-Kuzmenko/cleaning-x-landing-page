@@ -20,15 +20,15 @@ Hi, my name is **Alexey**! And this is one of my works for a web-developer portf
 
 ---
 
-### Project features:
+## Project features:
 
-#### 1.Cookies alert with preferences.
+### 1.Cookies alert with preferences.
 
 You can configure which cookies are allowed:
 
 <img src="https://drive.google.com/uc?export=view&id=1Skjuz7tLVJPCuhcrRwBklD7dZ6pdN3zG" style="width: 600px; max-width: 100%; height: auto"/>
 
-#### 2.Active form.
+### 2.Active form.
 
 This page has a form, and you can order a cleaning service. When you click the "Submit" button, your personal data sending to API. I made this functionality using AJAX with the POST method.
 
@@ -44,16 +44,18 @@ This page has a form, and you can order a cleaning service. When you click the "
 
 > **Link to used API:** <https://jsonplaceholder.typicode.com/>
 
-#### 3.Functional cart.
+### 3.Functional cart.
 
 After a successful API response, the cart changes its index.
 
-**When you don't order any services:**
+**When you don't order any services:** <br>
+
 <img src="https://drive.google.com/uc?export=view&id=1PeopAlH7V7WYTI0MHQBwZwT_pw1_QW76" style="width: 500px; max-width: 100%; height: auto"/>
 
-**After ordering services**
+**After ordering services:** <br>
+
 <img src="https://drive.google.com/uc?export=view&id=17QPJKMX7MI9Hh-sj0qG6WXOs8QQrUeqJ" style="width: 450px; max-width: 100%; height: auto"/>
 
 ---
 
-<iframe src="https://giphy.com/embed/6tHy8UAbv3zgs" width="480" height="353" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+![gift](https://media4.giphy.com/media/6tHy8UAbv3zgs/giphy.gif?cid=ecf05e47jro4yaxjymhoka91p80jlpw6poitpkihzo2aadey&rid=giphy.gif&ct=g)
